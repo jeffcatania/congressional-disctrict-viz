@@ -43,8 +43,8 @@ var svg = d3.select("body").append("svg")
     .attr("height", height);
 
 queue()
-    .defer(d3.json, "/mbostock/raw/4090846/us.json")
-    .defer(d3.json, "/mbostock/raw/4090846/us-congress-113.json")
+    .defer(d3.json, "us.json")
+    .defer(d3.json, "us-congress-113.json")
     .await(ready);
 
 function ready(error, us, congress) {
